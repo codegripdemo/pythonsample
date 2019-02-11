@@ -158,4 +158,4 @@ class TestCases(unittest.TestCase):
                 session['access_token'] = 'NOT_A_CODE'
             with Betamax(app.requests_session).use_cassette('me_failure'):
                 response = client.get('/me')
-        self.assertEquals(response.status_code, 401)
+        self.assertEquals(response.status_code, 401)   
